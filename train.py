@@ -23,8 +23,9 @@ bank_df = bank_df.sample(frac=1)
 
 
 # Splitting data into training and testing sets
-X = bank_df.drop(["Exited"], axis=1)
 y = bank_df.Exited
+X = bank_df.drop(["Exited"], axis=1)
+#y = bank_df.Exited
 
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.3, random_state=125
