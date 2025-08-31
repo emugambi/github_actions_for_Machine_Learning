@@ -16,7 +16,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import MinMaxScaler, OrdinalEncoder
 
 # loading the data
-bank_df = pd.read_csv("test.csv", index_col="id", nrows=1000)
+bank_df = pd.read_csv("train2.csv", index_col="id", nrows=1000)
 #bank_df = pd.read_csv("train.csv", nrows=100, header = 0)
 bank_df = bank_df.drop(["CustomerId", "Surname"], axis=1)
 bank_df = bank_df.sample(frac=1)
