@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          lfs: true
+        #with:
+        #  lfs: true
       - uses: iterative/setup-cml@v2
       - name: Install Packages
         run: pip install --upgrade pip && pip install -r requirements.txt
@@ -33,5 +33,5 @@ jobs:
           echo '![Confusion Matrix](model_results.png)' >> report.md
 
           cml comment create report.md
-          echo ''
+        
 
