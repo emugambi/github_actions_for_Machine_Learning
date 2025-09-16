@@ -7,6 +7,7 @@ Created on Thu Sep  4 11:08:10 2025
 #import os
 import pandas as pd
 import numpy as np
+import pickle
 import math
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
@@ -17,7 +18,8 @@ import warnings
 warnings.filterwarnings('ignore')
 
 fpath = 'malicious_phish.csv'
-data_nrows = 20000
+mpath = 'trained_model.pkl'
+data_nrows = 10000
 """
 =================================================
 string / character manipulation
@@ -220,6 +222,13 @@ print(f"Best score: {grid_search.best_score_}")
 best_xgb_model = grid_search.best_estimator_
 test_accuracy = best_xgb_model.score(X_test, y_test)
 print(f"Test accuracy of the best model: {test_accuracy}")
+
+""" Save the trained model using pickle """
+filename = mpath
+with open(filename, 'wb') as file:
+    pickle.dump(best_xgb_model, file)
+print(f"Model saved to {filename}")
+
 """
 =================================================
 compute classification performance
@@ -241,3 +250,14 @@ f1 = (2*precision*recall)/(precision+recall)
 ## Write metrics to file
 with open("metrics.txt", "w") as outfile:
     outfile.write(f"\nPrecision = {round(precision, 2)}, recall = {round(precision, 2)},F1 Score = {round(f1, 2)}\n\n")
+
+## model deployment test cases
+with open(filename, 'rb') as file:
+    loaded_model = pickle.load(file)
+print("Model loaded successfully.")
+
+# Simulate new events (e.g., new data points to predict)
+tst_cases = pd.read_csv('test_cases.csv')
+tst_features = generate_features(tst_cases)
+predictions = loaded_model.predict(tst_features)
+print(predictions)

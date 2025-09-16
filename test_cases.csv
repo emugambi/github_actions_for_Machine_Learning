@@ -1,0 +1,15 @@
+,url,explanation,verdict
+0,http://marlianstv.com/loan/office365/,"The URL contains ""office365"" within a subdirectory on a likely unrelated domain, which may suggest a phishing attempt.",phishing
+1,https://www.google.com,"This URL is the legitimate website for Google, a widely recognized and trusted internet company.",benign
+2,http://www.rt.com/tags/football/,RT.com is a well-known news website. The URL leads to a page with football-related tags.,Benign
+3,https://drfone.wondershare.net/ad/,"This URL belongs to Wondershare, a legitimate software company, and the path /ad/ suggests an advertisement or promotional page.",Benign
+4,https://reconciliation.americanexpress.com/,"This URL is from a legitimate American Express domain, related to reconciliation services.",Benign
+5,http://scholar.google.com.ua/citations?user=r7GEXWwAAAAJ&hl=ru,"The subdomain of this URL is a well-known and reputable internet entity, Google Scholar.",Benign
+6,https://pizza.dominos.com/missouri/hollister/,"The URL belongs to the official Domino's Pizza website, a well-known pizza chain. It appears to be a location-specific page.",benign
+7,https://www.youtube.com/premium,"The URL belongs to YouTube, a well-known and reputable video-sharing platform, specifically its premium subscription service.",Benign
+8,http://www.dictionary.com/browse/lan,"The URL belongs to dictionary.com, a well-known and reputable online dictionary. It is likely a safe link.",Benign
+9,http://allrecipes.com/Recipe/Midwest-Salisbury-Steak/Detail.aspx?soid=recs_recipe_9,"The URL belongs to allrecipes.com, a well-known and reputable website for recipes.",Benign
+10,http://marlianstv.com/loan/office365/,"The URL imitates Microsoft's Office 365, which is a phishing tactic. The domain 'marlianstv.com' is not associated with Microsoft.",phishing
+11,http://fb.manage-pages.com/,The URL contains 'fb' which can be misleading. The domain 'manage-pages.com' is suspicious and not related to Facebook.,phishing
+12,https://www.amazon.com,"This URL belongs to Amazon, a reputable and well-known e-commerce website. The use of HTTPS indicates a secure connection.",benign
+13,https://www.amazоn.com,"The URL uses a Cyrillic 'о' instead of the Latin 'o', which is a common phishing tactic to deceive users.",phishing
