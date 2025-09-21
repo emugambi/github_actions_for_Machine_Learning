@@ -19,7 +19,7 @@ warnings.filterwarnings('ignore')
 
 fpath = 'malicious_phish.csv'
 mpath = 'trained_model.pkl'
-data_nrows = 10000
+data_nrows = 50000
 """
 =================================================
 string / character manipulation
@@ -259,5 +259,16 @@ print("Model loaded successfully.")
 # Simulate new events (e.g., new data points to predict)
 tst_cases = pd.read_csv('test_cases.csv')
 tst_features = generate_features(tst_cases)
+tst_classes = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1]
 predictions = loaded_model.predict(tst_features)
 print(predictions)
+test_accuracy = loaded_model.score(tst_features, tst_classes)
+print(f"Test accuracy of the best model: {test_accuracy}")
+# save original training set for future re-training
+X_train['class'] = y_train
+X_train = X_train.reset_index()
+X_train.to_csv('original_train_set.csv')
+
+tst_features['class'] = tst_classes
+tst_features = tst_features.reset_index()
+tst_features.to_csv('new_url_features.csv')
