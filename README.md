@@ -10,21 +10,20 @@ The work done involves various pieces:
 ## Features
 
 🎉 Training an Xgboost ML model to perform URL detection
-
--https://github.com/emugambi/github_actions_for_Machine_Learning/blob/main/run_Xgboost_trainer.py
-- results
+-run_Xgboost_trainer.py
+- https://github.com/emugambi/github_actions_for_Machine_Learning/commit/f8a74b4736e419d8bc0c02eca9baa1d98805631c#commitcomment-166209372
 
 🎉 Using an LLM for URL detection use case
-
--https://github.com/emugambi/github_actions_for_Machine_Learning/blob/main/url_llm_detector.py
+-url_llm_detector.py
 - results
 
 🎉 Boosting the Xgboost model using LLM output
-
--https://github.com/emugambi/github_actions_for_Machine_Learning/blob/main/run_Xgboost_retrainer.py
+-run_Xgboost_retrainer.py
 - Results
 
 🎉Design Doc for this work
+-URL Detection Design DOC.md
+-URL Detection_Architecture.pdf
 
 🎉 Medium publication that gives indepth information about the work done and the results
 
