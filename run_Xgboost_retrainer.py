@@ -12,14 +12,17 @@ import xgboost as xgb
 from sklearn.model_selection import GridSearchCV
 import warnings
 warnings.filterwarnings('ignore')
+# number of copies of new class of events in order to change the decision bounday of the old ML to a desired output
+up_sampling_rate = 8
 
-# get first dataset
+# get the original training dataset
 trn_data_1 = pd.read_csv('original_train_set.csv')
 trn_data_1 = trn_data_1.reset_index(drop=True)
+# get the features from new test cases
 trn_data_2 = pd.read_csv('new_url_features.csv')
 trn_data_2 = trn_data_2.reset_index(drop=True)
-# get 
-df_list = [trn_data_2] * 8
+# up-sample the new test cases
+df_list = [trn_data_2] * up_sampling_rate
 concatenated_df = pd.concat(df_list)
 concatenated_df = concatenated_df.reset_index(drop=True)
 
@@ -45,6 +48,7 @@ grid_search.fit(X_train, y_train)
 print(f"Best parameters: {grid_search.best_params_}")
 print(f"Best score: {grid_search.best_score_}")
 best_xgb_model = grid_search.best_estimator_
+# original predictions from the ML model
 y_test = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1]
 del trn_data_2['class']
 X_test = trn_data_2
