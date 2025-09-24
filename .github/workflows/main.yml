@@ -18,8 +18,8 @@ jobs:
       - uses: iterative/setup-cml@v2
       - name: Install Packages
         run: pip install --upgrade pip && pip install -r requirements.txt
-      - name: Format
-        run: black *.py
+      #- name: Format
+      #  run: black *.py
       - name: Train
         run: python code/run_Xgboost_trainer.py
       - name: Evaluation
