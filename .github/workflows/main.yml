@@ -27,10 +27,10 @@ jobs:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: | 
           echo "## Model Metrics" > report.md
-          cat metrics.txt >> report.md
+          cat model/metrics.txt >> report.md
             
           echo '## Confusion Matrix Plot' >> report.md
-          echo '![Confusion Matrix](model_results.png)' >> report.md
+          echo '![Confusion Matrix](model/model_results.png)' >> report.md
 
           cml comment create report.md
         
