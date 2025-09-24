@@ -17,9 +17,9 @@ from sklearn.model_selection import train_test_split
 import warnings
 warnings.filterwarnings('ignore')
 
-fpath = 'malicious_phish.csv'
-mpath = 'trained_model.pkl'
-data_nrows = 50000
+fpath = 'data/malicious_phish.csv'
+mpath = 'model/trained_model.pkl'
+data_nrows = 10000
 """
 =================================================
 string / character manipulation
@@ -241,14 +241,14 @@ disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=best_xgb_model
 
 ## save confusion matrix to file
 disp.plot()
-plt.savefig("model_results.png", dpi=120)
+plt.savefig("model/model_results.png", dpi=120)
 tn, fp, fn, tp = cm.ravel()
 tn, fp, fn, tp = confusion_matrix(y_test, prediction).ravel()
 precision, recall = tp/(tp+fp), tp/(tp+fn)
 f1 = (2*precision*recall)/(precision+recall)
 
 ## Write metrics to file
-with open("metrics.txt", "w") as outfile:
+with open("model/metrics.txt", "w") as outfile:
     outfile.write(f"\nPrecision = {round(precision, 2)}, recall = {round(precision, 2)},F1 Score = {round(f1, 2)}\n\n")
 
 ## model deployment test cases
@@ -257,7 +257,7 @@ with open(filename, 'rb') as file:
 print("Model loaded successfully.")
 
 # Simulate new events (e.g., new data points to predict)
-tst_cases = pd.read_csv('test_cases.csv')
+tst_cases = pd.read_csv('data/test_cases.csv')
 tst_features = generate_features(tst_cases)
 tst_classes = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1]
 predictions = loaded_model.predict(tst_features)
@@ -267,8 +267,8 @@ print(f"Test accuracy of the best model: {test_accuracy}")
 # save original training set for future re-training
 X_train['class'] = y_train
 X_train = X_train.reset_index()
-X_train.to_csv('original_train_set.csv')
+X_train.to_csv('data/original_train_set.csv')
 
 tst_features['class'] = tst_classes
 tst_features = tst_features.reset_index()
-tst_features.to_csv('new_url_features.csv')
+tst_features.to_csv('data/new_url_features.csv')

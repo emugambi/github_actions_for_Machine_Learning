@@ -16,10 +16,10 @@ warnings.filterwarnings('ignore')
 up_sampling_rate = 8
 
 # get the original training dataset
-trn_data_1 = pd.read_csv('original_train_set.csv')
+trn_data_1 = pd.read_csv('data/original_train_set.csv')
 trn_data_1 = trn_data_1.reset_index(drop=True)
 # get the features from new test cases
-trn_data_2 = pd.read_csv('new_url_features.csv')
+trn_data_2 = pd.read_csv('data/new_url_features.csv')
 trn_data_2 = trn_data_2.reset_index(drop=True)
 # up-sample the new test cases
 df_list = [trn_data_2] * up_sampling_rate
