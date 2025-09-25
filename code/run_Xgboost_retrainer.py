@@ -55,4 +55,5 @@ X_test = trn_data_2
 test_accuracy = best_xgb_model.score(X_test, y_test)
 print(f"Test accuracy of the new retrained model: {test_accuracy}")
 new_predictions = best_xgb_model.predict(X_test)
+print(f"predictions before retraining: {y_test}")
 print(f"predictions after retraining: {new_predictions}")

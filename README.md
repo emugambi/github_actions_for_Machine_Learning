@@ -24,7 +24,9 @@ The work done involves various pieces:
 
 🎉Design Doc for this work
 * URL Detection Design DOC.md
+(https://github.com/emugambi/github_actions_for_Machine_Learning/blob/main/URL%20Detection%20Design%20DOC.md)
 * URL Detection_Architecture.pdf
+(https://github.com/emugambi/github_actions_for_Machine_Learning/blob/main/URL%20Detection_Architecture.pdf)
 
 🎉 Medium publication that gives indepth information about the work done and the results
 
