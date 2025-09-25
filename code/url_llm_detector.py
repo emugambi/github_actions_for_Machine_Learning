@@ -92,10 +92,12 @@ def main():
     """
     Example of output from running an LLM search of a URL to determine if its benign or phishing-like
     """
-    print('###########################################################################################')
-    print(llm_output.loc[0]['url'])
-    print(llm_output.loc[0]['explanation'])
-    print(llm_output.loc[0]['verdict'])
+    print('########################################OUTPUT#####################################################')
+    print(llm_output)
+    print('########################################EXPLAINED##################################################')
+    print("URL:",llm_output.loc[0]['url'])
+    print("Reasoning:",llm_output.loc[0]['explanation'])
+    print("Verdict:",llm_output.loc[0]['verdict'])
     
 if __name__ == "__main__":
     main()

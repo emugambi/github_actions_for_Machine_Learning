@@ -33,6 +33,8 @@ jobs:
           echo '![Confusion Matrix](model/model_results.png)' >> report.md
 
           cml comment create report.md
+      - name: LLM
+        run : python code/url_llm_detector.py
       - name: Retraining
         run: python code/run_Xgboost_retrainer.py
         
