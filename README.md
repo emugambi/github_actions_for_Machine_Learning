@@ -16,11 +16,11 @@ The work done involves various pieces:
 
 🎉 Using an LLM for URL detection use case
 * code/url_llm_detector.py
-* results
+* results : see Github Action Pipeline under "Training"
 
 🎉 Boosting the Xgboost model using LLM output
 * code/run_Xgboost_retrainer.py
-* Results
+* results : see Github Action Pipeline under "Retraining"
 
 🎉Design Doc for this work
 * URL Detection Design DOC.md
