@@ -18,7 +18,7 @@ if not PROJECT_ID or PROJECT_ID == "url_detection":
 LOCATION = os.environ.get("GOOGLE_CLOUD_REGION", "us-central1")
 client = genai.Client(vertexai=True, project=PROJECT_ID, location=LOCATION)
 MODEL_ID = "gemini-2.0-flash-001"  # @param {type: "string"}
-client = genai.Client(api_key="")
+client = genai.Client(api_key="AIzaSyAxpzfte18Wyn3kx08y7HjXgeAP6YIdVnQ")
 
 class Output(BaseModel):
     """ output of url detector """
