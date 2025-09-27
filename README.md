@@ -8,19 +8,19 @@ The work done involves various pieces:
 * We show how the classical LLM can benefit from being retrained after incorporating the LLM feedback so that it is better able to improve its detection edge using real-life URLs.
 
 ## Features
-
+github action successful worfklow run:
+(https://github.com/emugambi/github_actions_for_Machine_Learning/actions/runs/18020216155/job/51275423976)
 🎉 Training an Xgboost ML model to perform URL detection
 * code/run_Xgboost_trainer.py
-* results:
-(https://github.com/emugambi/github_actions_for_Machine_Learning/commit/f8a74b4736e419d8bc0c02eca9baa1d98805631c#commitcomment-166209372)
+* results : see Github Action Pipeline under the step - "Evaluation" and "Training"
 
 🎉 Using an LLM for URL detection use case
 * code/url_llm_detector.py
-* results : see Github Action Pipeline under "Training"
+* results : see Github Action Pipeline under the step - "LLM"
 
 🎉 Boosting the Xgboost model using LLM output
 * code/run_Xgboost_retrainer.py
-* results : see Github Action Pipeline under "Retraining"
+* results : see Github Action Pipeline under the step - "Retraining"
 
 🎉Design Doc for this work
 * URL Detection Design DOC.md
@@ -28,8 +28,8 @@ The work done involves various pieces:
 * URL Detection_Architecture.pdf
 (https://github.com/emugambi/github_actions_for_Machine_Learning/blob/main/URL%20Detection_Architecture.pdf)
 
-🎉 Medium publication that gives indepth information about the work done and the results
-
+🎉 Medium publication that gives in-depth information about the work done and the results
+(https://medium.com/@ernestmugambi/using-llms-to-boost-classical-machine-learning-url-classification-models-25369d6051fb)
 
 ## Related Things
 
