@@ -1,4 +1,6 @@
-# A project on automating ML workflow using scikit-learn pipelines, CML, and GitHub actions.
+# An ML workflow for detecting malicious URLs and improved using LLM AI knowledge - trading off classical ML and LLMs
+
+## Tools used : scikit-learn pipelines, CML, and GitHub actions.
 
 ## Using LLMs to Boost Classical Machine Learning URL classification Models.
 
