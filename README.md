@@ -1,4 +1,4 @@
-# An ML workflow for detecting malicious URLs and improved using LLM AI knowledge - trading off classical ML and LLMs
+# An ML workflow for detecting malicious URLs and improved using LLM AI knowledge
 
 ## Tools used : scikit-learn pipelines, CML, and GitHub actions.
 
